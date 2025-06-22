@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onedrive-organizer"
+version = "0.1.0"
+description = "Organize OneDrive: scan, deduplicate, rename, archive."
+authors = [{ name = "Your Name", email = "you@example.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "msal>=1.27.0",
+    "requests",
+    "pyyaml",
+    "tqdm",
+    "typer>=0.9.0",
+    "rich",
+    "pytesseract; extra == 'ocr'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "responses", "black", "isort", "flake8", "mypy"]
+ocr = ["pytesseract"]
+
+[project.scripts]
+onedrive-organizer = "organizer.cli:app"
