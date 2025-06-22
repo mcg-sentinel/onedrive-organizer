@@ -1,0 +1,11 @@
+naming:
+  pattern: "{department}_{project}_{date:%Y%m%d}_{version}.{ext}"
+  default_department: "GEN"
+  default_project: "MISC"
+
+labels:
+  archive: "[ARCHIVE]"
+  draft: "[DRAFT]"
+  final: "[FINAL]"
+
+archive_root: "Archive"
