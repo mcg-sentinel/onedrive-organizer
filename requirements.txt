@@ -1,0 +1,4 @@
+msal>=1.27.0
+requests
+pyyaml
+tqdm
